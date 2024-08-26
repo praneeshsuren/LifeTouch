@@ -16,9 +16,11 @@
   </head>
   <body>
 
-    <?php include 'sidebar.php'; ?>
-
-    <?php include 'dashboard.php'; ?>
+    <?php include '../components/sidebar.php'; ?>
+    
+    <section class="home">
+        <?php include 'dashboard.php'; ?>
+    </section>
 
     <script src="script.js"></script>
 
