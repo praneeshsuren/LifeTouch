@@ -3,7 +3,7 @@
 </div>
 <div class="head">
     <div class="user-img">
-        <img src="../../../public/images/image.png" alt="">
+        <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
     </div>
     <div class="user-details">
         <p class="name">Trainer</p>
