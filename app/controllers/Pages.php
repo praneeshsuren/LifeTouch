@@ -1,7 +1,9 @@
 <?php
     class Pages extends Controller{
+        private $pagesModel;
+    
         public function __construct(){
-            // echo 'Pages loaded';
+            $this->pagesModel = $this->model('M_Pages');
         }
 
         public function index(){
@@ -16,12 +18,14 @@
             $this->view('dashboard');
         }
 
-        public function about($name){
+        public function test(){
+            $users = $this->pagesModel->getPages();
+
             $data = [
-                'userName' => $name
+                'users' => $users
             ];
 
-            $this->view('about', $data);
+            $this->view('test', $data);
         }
     }
 ?>

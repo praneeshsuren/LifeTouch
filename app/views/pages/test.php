@@ -6,10 +6,11 @@
     <title><?php echo SITENAME; ?></title>
 </head>
 <body>
-    <h1>This is the about page. Hi <?php echo $data['userName'] ?> </h1>
+    <h1>Users</h1>
 
-    <h1>App root <?php echo APPROOT; ?> </h1>
-
-    <h1>URL root <?php echo URLROOT; ?> </h1>
+    <?php foreach($data['users'] as $user): ?>
+        <p><?php echo $user->name; ?> - <?php echo $user->age; ?></p>
+    <?php endforeach; ?>
+    
 </body>
 </html> 
