@@ -9,22 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="../../../public/css/style.css" />
-    <!-- BOXICONS -->
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/style.css" />
+    <!-- ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>LifeTouch</title>
+    <title><?php echo SITENAME; ?></title>
   </head>
   <body>
 
     <section class="sidebar">
-        <?php include '../components/sidebar.php'; ?>
+        <?php require APPROOT.'/views/components/sidebar.php' ?>
     </section>
     
-    <!-- <section class="home">
+    <section class="home">
       <div class="text">Dashboard</div>
-    </section> -->
+    </section>
 
-    <script src="../../../public/js/script.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
 
   </body>
 </html>

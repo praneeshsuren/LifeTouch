@@ -10,7 +10,7 @@
     --sidebar-color: #FFF;
     --primary-color: #695CFE;
     --primary-color-light: #ebe9fd;
-    --seperator-color: #f6f6f6;
+    --separator-color: #f6f6f6;
     --toggle-color: #DDD;
     --text-color: #757575;
     --hover-btn: #000;
@@ -32,7 +32,7 @@ body.dark{
     --sidebar-color: #242526;
     --primary-color: #3A3B3C;
     --primary-color-light: #3A3B3C;
-    --seperator-color: #090909;
+    --separator-color: #090909;
     --toggle-color: #FFF;
     --text-color: #CCC;
     --hover-btn: #FFF;
@@ -54,7 +54,7 @@ body.dark{
     display: flex;
     gap: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--seperator-color);
+    border-bottom: 1px solid var(--separator-color);
 }
 
 .user-img{
@@ -144,7 +144,7 @@ body.dark{
     margin-left: 20px;
     padding-left: 20px;
     padding-top: 5px;
-    border-left: 1px solid var(--seperator-color);
+    border-left: 1px solid var(--separator-color);
     transition: var(--tran-03);
 }
 
@@ -158,7 +158,7 @@ body.dark{
 .menu:not(:last-child){
     padding-bottom: 10px;
     margin-bottom: 20px;
-    border-bottom: 2px solid var(--seperator-color);
+    border-bottom: 2px solid var(--separator-color);
 }
 
 .menu-btn {
@@ -172,7 +172,7 @@ body.dark{
     align-items: center;
     justify-content: center;
     color: var(--text-color);
-    border: 2px solid var(--seperator-color);
+    border: 2px solid var(--separator-color);
     background-color: var(--sidebar-color);
     cursor: pointer;
     transition: var(--tran-03);
@@ -256,7 +256,7 @@ body.dark{
     width: 200px;
     border-radius: 20px;
     padding: 10px 20px;
-    border: 1px solid var(--seperator-color);
+    border: 1px solid var(--separator-color);
     background-color: var(--sidebar-color);
     box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
 }
@@ -318,7 +318,7 @@ body.dark .menu .mode i.moon{
 
 .menu .mode .toggle-switch {
     position: absolute;
-    right: 10px;
+    right: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -331,6 +331,7 @@ body.dark .menu .mode i.moon{
     position: relative;
     height: 22px;
     width: 44px;
+    right: 10px;
     border-radius: 25px;
     margin-left: 20px;
     background: var(--toggle-color);
@@ -359,5 +360,30 @@ body.dark .switch::before{
 }
 
 .sidebar.active .menu .mode .toggle-switch{
-    right: 0;
+    right: -10px;
+}
+
+
+/* Dashboard */
+.home{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background: var(--body-color);
+    transition: var(--tran-05);
+    z-index: -2;
+}
+
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 40px;
+}
+
+.sidebar.active ~ .home{
+    left: 88px;
+    width: calc(100% - 88px);
 }
