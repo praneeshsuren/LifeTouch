@@ -21,9 +21,10 @@
     </section>
     
     <main>
-
-      <h1 class="title">Dashboard</h1>
-
+      <div class="title">
+        <h1>Dashboard</h1>
+        <i class="ph ph-bell notification"></i>
+      </div>
       <div class="insights">
 
         <div class="members">
