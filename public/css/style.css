@@ -390,8 +390,21 @@ main > .title{
     color: var(--text-color);
 }
 
-main > .title > .notification{
+main > .title > .greeting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-right: 2rem;
+    gap: 1rem;
+}
+
+main > .title > .greeting h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+main > .title > .greeting > i{
     border-radius: 50%;
     padding: 3px;
     background: var(--separator-color);
