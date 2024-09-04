@@ -20,9 +20,75 @@
         <?php require APPROOT.'/views/components/sidebar.php' ?>
     </section>
     
-    <section class="home">
-      <div class="text">Dashboard</div>
-    </section>
+    <main>
+
+      <h1 class="title">Dashboard</h1>
+
+      <div class="insights">
+
+        <div class="members">
+          <i class="ph ph-users"></i>
+          <div class="middle">
+            <div class="left">
+              <h3>Total Members</h3>
+              <h1>1049</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="38"></circle>
+              </svg>
+              <div class="number">
+                <p>75%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Last 30 days</small>
+        </div>
+        <!-- END OF MEMBERS -->
+
+        <div class="bookings">
+          <i class="ph ph-chart-bar"></i>
+          <div class="middle">
+            <div class="left">
+              <h3>Total Bookings</h3>
+              <h1>10</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="38"></circle>
+              </svg>
+              <div class="number">
+                <p>75%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Last 24 Hours</small>
+        </div>
+          <!-- END OF BOOKINGS -->
+
+          <div class="workouts">
+            <i class="ph ph-trend-up"></i>
+            <div class="middle">
+              <div class="left">
+                <h3>Workouts Created</h3>
+                <h1>59</h1>
+              </div>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="38"></circle>
+                </svg>
+                <div class="number">
+                  <p>75%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">Last 30 days</small>
+          </div>
+          <!-- END OF WORKOUTS -->
+
+      </div>
+
+    </main>
 
     <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
 
