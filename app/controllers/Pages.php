@@ -14,8 +14,8 @@
             $this->view('login');
         }
 
-        public function dashboard(){
-            $this->view('dashboard');
+        public function trainer(){
+            $this->view('trainer-dashboard');
         }
 
         public function test(){
