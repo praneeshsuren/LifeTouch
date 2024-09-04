@@ -17,7 +17,7 @@
   <body>
 
     <section class="sidebar">
-        <?php require APPROOT.'/views/components/sidebar.php' ?>
+        <?php require APPROOT.'/views/components/trainer-sidebar.php' ?>
     </section>
     
     <main>
