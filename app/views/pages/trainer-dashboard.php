@@ -23,7 +23,10 @@
     <main>
       <div class="title">
         <h1>Dashboard</h1>
-        <i class="ph ph-bell notification"></i>
+        <div class="greeting">
+          <i class="ph ph-bell notification"></i>
+          <h2>Hi, John!</h2>
+        </div>
       </div>
       <div class="insights">
 
