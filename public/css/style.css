@@ -116,6 +116,7 @@ body.dark{
 .menu ul li > a:hover{
     color: var(--sidebar-color);
     background: var(--primary-color);
+    z-index: 100;
 }
 
 .menu ul li.active > a{
@@ -178,6 +179,7 @@ body.dark{
     background-color: var(--sidebar-color);
     cursor: pointer;
     transition: var(--tran-03);
+    z-index: 100;
 }
 
 .menu-btn:hover {
@@ -365,8 +367,13 @@ body.dark .switch::before{
     right: -10px;
 }
 
+.sidebar.active ~ main{
+    width: calc(100% - 92px);
+    left: 92px;
+}
 
 /* Dashboard */
+
 main{
     position: absolute;
     top: 0;
@@ -375,7 +382,7 @@ main{
     width: calc(100% - 250px);
     background: var(--body-color);
     transition: var(--tran-05);
-    z-index: -2;
+    z-index: 1;
 }
 
 main > .title{
@@ -413,9 +420,11 @@ main > .title > .greeting > i{
     cursor: pointer;
 }
 
+
+/* Insight Cards */
 main .insights{
     display: grid;
-    grid-template-columns: repeat(3, 16.5rem);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1.6rem;
     margin-left: 2rem;
 }
@@ -427,6 +436,10 @@ main .insights > div{
     border-radius: 40px;
     box-shadow: var(--box-shadow-color);
     transition: var(--tran-03);
+}
+
+main .insights > div:hover{
+    background: var(--separator-color);
 }
 
 main .insights > div i{
@@ -509,7 +522,62 @@ main .insights .progress .number {
     font-size: 1rem;
 }
 
-.sidebar.active ~ main{
-    width: calc(100% - 92px);
-    left: 92px;
+main .recent-announcements{
+    position: relative;
+    top: -15.3625rem;
+    right: -55rem;
+    max-width: 20rem;
+    margin-left: 2rem;
 }
+
+main .recent-announcements h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+main .recent-announcements .announcements{
+    background: var(--sidebar-color);
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: var(--box-shadow-color);
+}
+
+main .recent-announcements .announcement{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--separator-color);
+    color: var(--hover-btn);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: var(--tran-03);
+}
+
+main .recent-announcements .announcement:hover{
+    transform: translateY(-10px);
+}
+
+main .recent-announcements .announcement .profile-img{
+    display: flex;
+    margin-bottom: 3rem;
+    margin-left: 0.5rem;
+    width: 4.5rem;
+}
+
+main .recent-announcements .announcement .profile-img img{
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .recent-announcements .announcement .message{
+margin-left: 1rem;
+}
+
