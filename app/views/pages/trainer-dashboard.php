@@ -25,7 +25,7 @@
       <div class="title">
         <h1>Dashboard</h1>
         <div class="greeting">
-          <i class="ph ph-bell notification"></i>
+          <span class="bell-container"><i class="ph ph-bell notification"></i></span>
           <h2>Hi, John!</h2>
         </div>
       </div>
