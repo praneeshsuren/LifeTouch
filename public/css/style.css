@@ -430,7 +430,7 @@ main .insights{
 }
 
 main .insights > div{
-    color: var(--text-color);
+    color: var(--hover-btn);
     background: var(--sidebar-color);
     padding: 2rem;
     border-radius: 40px;
@@ -521,6 +521,8 @@ main .insights .progress .number {
     color: var(--text-color);
     font-size: 1rem;
 }
+
+/* Announcements Section */
 
 main .recent-announcements{
     position: relative;
