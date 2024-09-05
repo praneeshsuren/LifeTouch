@@ -21,6 +21,7 @@
     </section>
     
     <main>
+
       <div class="title">
         <h1>Dashboard</h1>
         <div class="greeting">
@@ -29,7 +30,6 @@
         </div>
       </div>
       <div class="insights">
-
         <div class="members">
           <i class="ph ph-users"></i>
           <div class="middle">
@@ -89,9 +89,44 @@
             <small class="text-muted">Last 30 days</small>
           </div>
           <!-- END OF WORKOUTS -->
-
       </div>
 
+      <div class="recent-announcements">
+        <h2>Recent Announcements</h2>
+        <div class="announcements">
+
+          <div class="announcement">
+            <div class="profile-img">
+            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+            </div>
+            <div class="message">
+              <p><b>Mark Anderson</b></br>GYM Renovation Notice for all Members and Trainers</p>
+              <small class="text-muted">2 hours ago</small>
+            </div>
+          </div>
+
+          <div class="announcement">
+            <div class="profile-img">
+            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+            </div>
+            <div class="message">
+              <p><b>Mark Anderson</b></br>GYM Renovation Notice for all Members and Trainers</p>
+              <small class="text-muted">2 hours ago</small>
+            </div>
+          </div>
+
+          <div class="announcement">
+            <div class="profile-img">
+            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+            </div>
+            <div class="message">
+              <p><b>Mark Anderson</b></br>GYM Renovation Notice for all Members and Trainers</p>
+              <small class="text-muted">2 hours ago</small>
+            </div>
+          </div>
+
+        </div> 
+      </div>
     </main>
 
     <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
