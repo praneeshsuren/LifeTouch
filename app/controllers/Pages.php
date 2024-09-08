@@ -18,6 +18,10 @@
             $this->view('dashboard');
         }
 
+        public function manager(){
+            $this->view('manager/manager_dashboard');
+        }
+
         public function test(){
             $users = $this->pagesModel->getPages();
 
