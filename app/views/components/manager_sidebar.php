@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="manager/announcement.php">
+                <a href="announcement">
                 <i class="ph ph-megaphone"></i>
                     <span class="text">Post Announcements</span>
                 </a>

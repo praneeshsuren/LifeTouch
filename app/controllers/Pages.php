@@ -21,6 +21,12 @@
         public function manager(){
             $this->view('manager/manager_dashboard');
         }
+        public function announcement(){
+            $this->view('manager/announcement');
+        }
+        public function announcement_main(){
+            $this->view('manager/announcement_main');
+        }
 
         public function test(){
             $users = $this->pagesModel->getPages();

@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-:root{
+:root {
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --primary-color: #695CFE;
@@ -18,16 +18,16 @@
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease; 
+    --tran-05: all 0.5s ease;
 }
 
-body{
+body {
     height: 100vh;
     background: var(--body-color);
     transition: var(--tran-02);
 }
 
-body.dark{
+body.dark {
     --body-color: #18191A;
     --sidebar-color: #242526;
     --primary-color: #3A3B3C;
@@ -38,7 +38,7 @@ body.dark{
     --hover-btn: #FFF;
 }
 
-.sidebar{ 
+.sidebar {
     position: relative;
     width: 250px;
     height: 100%;
@@ -50,27 +50,27 @@ body.dark{
     padding: 24px;
 }
 
-.sidebar .head{
+.sidebar .head {
     display: flex;
     gap: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--separator-color);
 }
 
-.user-img{
+.user-img {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.user-img img{
+.user-img img {
     width: 100%;
     object-fit: cover;
 }
 
 .user-details .title,
-.menu .title{
+.menu .title {
     font-size: 10px;
     font-weight: 500;
     color: var(--text-color);
@@ -78,27 +78,27 @@ body.dark{
     margin-bottom: 10px;
 }
 
-.user-details .name{
+.user-details .name {
     font-size: 14px;
     font-weight: 600;
     color: var(--text-color);
 }
 
-.user-details .post{
+.user-details .post {
     color: var(--text-color);
 }
 
-.nav{
+.nav {
     flex: 1;
 }
 
-.menu ul li{
+.menu ul li {
     position: relative;
     list-style: none;
     margin-bottom: 5px;
 }
 
-.menu ul li a{
+.menu ul li a {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -111,34 +111,34 @@ body.dark{
     transition: var(--tran-03);
 }
 
-.menu ul li > a:hover{
+.menu ul li>a:hover {
     color: var(--sidebar-color);
     background: var(--primary-color);
 }
 
-.menu ul li.active > a{
+.menu ul li.active>a {
     color: var(--text-color);
     background: var(--primary-color-light);
 }
 
-.menu ul li .icon{
+.menu ul li .icon {
     font-size: 20 px;
 }
 
-.menu ul li .text{
+.menu ul li .text {
     flex: 1;
 }
 
-.menu ul li .arrow{
-    font-size: 14px; 
+.menu ul li .arrow {
+    font-size: 14px;
     transition: var(--tran-03);
 }
 
-.menu ul li .arrow.active{
+.menu ul li .arrow.active {
     transform: rotate(180deg);
 }
 
-.menu .sub-menu{ 
+.menu .sub-menu {
     display: none;
     margin-top: 10px;
     margin-left: 20px;
@@ -148,14 +148,14 @@ body.dark{
     transition: var(--tran-03);
 }
 
-.menu .sub-menu li a{
+.menu .sub-menu li a {
     padding: 10px 8px;
     font-size: 12px;
     transition: var(--tran-03);
 }
 
 
-.menu:not(:last-child){
+.menu:not(:last-child) {
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 2px solid var(--separator-color);
@@ -188,34 +188,34 @@ body.dark{
     color: var(--sidebar-color);
 }
 
-.sidebar.active{
+.sidebar.active {
     width: 92px;
 }
 
-.sidebar.active .menu-btn{
+.sidebar.active .menu-btn {
     transform: rotate(180deg);
 }
 
-.sidebar.active .user-details{
+.sidebar.active .user-details {
     display: none;
 }
 
-.sidebar.active .menu .title{
+.sidebar.active .menu .title {
     text-align: center;
 }
 
-.sidebar.active .menu ul li .arrow{
+.sidebar.active .menu ul li .arrow {
     display: none;
 }
 
-.sidebar.active .menu > ul > li > a{
+.sidebar.active .menu>ul>li>a {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar.active .menu > ul > li > a .text{
+.sidebar.active .menu>ul>li>a .text {
     position: absolute;
     left: 70px;
     top: 50%;
@@ -228,20 +228,20 @@ body.dark{
     visibility: hidden;
 }
 
-.sidebar.active .menu > ul > li > a .text::after{
+.sidebar.active .menu>ul>li>a .text::after {
     content: "";
     position: absolute;
     left: 0px;
     top: 25%;
     width: 20px;
-    height: 20px; 
+    height: 20px;
     border-radius: 2px;
     background-color: var(--primary-color);
     transform: rotate(45deg);
     z-index: -1;
 }
 
-.sidebar.active .menu > ul > li > a:hover .text{
+.sidebar.active .menu>ul>li>a:hover .text {
     left: 50px;
     opacity: 1;
     color: var(--sidebar-color);
@@ -249,7 +249,7 @@ body.dark{
     visibility: visible;
 }
 
-.sidebar.active .menu .sub-menu{
+.sidebar.active .menu .sub-menu {
     position: absolute;
     top: 0;
     left: 20px;
@@ -260,6 +260,7 @@ body.dark{
     background-color: var(--sidebar-color);
     box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
 }
+
 .menu .mode {
     position: relative;
     display: flex;
@@ -287,15 +288,15 @@ body.dark{
     display: none;
 }
 
-.menu .mode i.sun{
+.menu .mode i.sun {
     opacity: 0;
 }
 
-body.dark .menu .mode i.sun{
+body.dark .menu .mode i.sun {
     opacity: 1;
 }
 
-body.dark .menu .mode i.moon{
+body.dark .menu .mode i.moon {
     opacity: 0;
 }
 
@@ -306,7 +307,7 @@ body.dark .menu .mode i.moon{
     color: var(--text-color);
 }
 
-.menu .mode-text{
+.menu .mode-text {
     font-size: 14px;
     font-weight: 500;
     color: var(--text-color);
@@ -351,7 +352,7 @@ body.dark .menu .mode i.moon{
 }
 
 
-body.dark .switch::before{
+body.dark .switch::before {
     left: 24px;
 }
 
@@ -359,13 +360,13 @@ body.dark .switch::before{
     display: none;
 }
 
-.sidebar.active .menu .mode .toggle-switch{
+.sidebar.active .menu .mode .toggle-switch {
     right: -10px;
 }
 
 
 /* Dashboard */
-main{
+main {
     position: absolute;
     top: 0;
     left: 250px;
@@ -376,7 +377,7 @@ main{
     z-index: -2;
 }
 
-main .title{
+main .title {
     font-size: 30px;
     font-weight: 500;
     margin-top: 1.5rem;
@@ -385,14 +386,14 @@ main .title{
     color: var(--text-color);
 }
 
-main .insights{
+main .insights {
     display: grid;
     grid-template-columns: repeat(3, 16.5rem);
     gap: 1.6rem;
     margin-left: 2rem;
 }
 
-main .insights > div{
+main .insights>div {
     color: var(--text-color);
     background: var(--sidebar-color);
     padding: 2rem;
@@ -401,7 +402,7 @@ main .insights > div{
     transition: var(--tran-03);
 }
 
-main .insights > div i{
+main .insights>div i {
     background-color: #695CFE;
     padding: 0.5rem;
     border-radius: 50%;
@@ -409,34 +410,34 @@ main .insights > div i{
     font-size: 2rem;
 }
 
-main .insights > .bookings  i{
+main .insights>.bookings i {
     background-color: coral;
 }
 
-main .insights > .workouts  i{
+main .insights>.workouts i {
     background-color: lightgreen;
 }
 
-main .insights > div .middle{
+main .insights>div .middle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 12.5rem;
 }
 
-main .insights h3{
+main .insights h3 {
     margin: 1rem 0 0.6rem;
     font-size: 1rem;
 }
 
-main .insights .progress{
+main .insights .progress {
     position: relative;
     width: 92px;
     height: 92px;
     border-radius: 50%;
 }
 
-main .insights svg{
+main .insights svg {
     width: 7rem;
     height: 7rem;
 }
@@ -445,6 +446,7 @@ main .insights svg{
     0% {
         stroke-dashoffset: 0;
     }
+
     100% {
         stroke-dashoffset: 92;
     }
@@ -460,7 +462,7 @@ main .insights svg circle {
     animation: progress-animation 0.8s ease-out forwards;
 }
 
-main .insights .progress .number{
+main .insights .progress .number {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -481,7 +483,7 @@ main .insights .progress .number {
     font-size: 1rem;
 }
 
-.sidebar.active ~ main{
+.sidebar.active~main {
     width: calc(100% - 92px);
     left: 92px;
 }
