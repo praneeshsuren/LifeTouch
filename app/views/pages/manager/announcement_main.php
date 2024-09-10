@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,70 +15,80 @@
     <!-- ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title><?php echo SITENAME; ?></title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <section class="sidebar">
-        <?php require APPROOT.'/views/components/manager_sidebar.php' ?>
+        <?php require APPROOT . '/views/components/manager_sidebar.php' ?>
     </section>
-    
+
     <main>
-    
-    <div class="add">
-        <h1 class='title'>Announcements</h1>
-        <button>New Announcement</button>
-    </div>
-    <ul>
-    <li>
-        <div>
-        <div class="announcement">
-            <i class="ph ph-megaphone"></i>
-            <div class="announcement-content">
-                <div class="announcement-title">Gym renovation</div>
-                <div class="announcement-date">Apr 01, 2024</div>
-            </div>
-            <div class="buttons">
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-            </div>
+
+        <div class="add">
+            <h1 class='title'>Announcements</h1>
+            <button>New Announcement</button>
         </div>
-        </div>
-        <br>
-        <div>
-        <div class="announcement">
-            <i class="ph ph-megaphone"></i>
-            <div class="announcement-content">
-                <div class="announcement-title">Gym renovation</div>
-                <div class="announcement-date">Apr 01, 2024</div>
-            </div>
-            <div class="buttons">
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-            </div>
-        </div>
-        </div>
-        <br>
-        <div>
-        <div class="announcement">
-            <i class="ph ph-megaphone"></i>
-            <div class="announcement-content">
-                <div class="announcement-title">Gym renovation</div>
-                <div class="announcement-date">Apr 01, 2024</div>
-            </div>
-            <div class="buttons">
-                <button>View</button>
-                <button>Edit</button>
-                <button>Delete</button>
-            </div>
-        </div>
-        </div>
-    </li>
-</ul>
+        <ul>
+            <li>
+                <div>
+                    <div class="announcement">
+                        <div class="user-img">
+                            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-title">Gym renovation</div>
+                            <p>Admin</p>
+                            <div class="announcement-date">Apr 01, 2024</div>
+                        </div>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="announcement">
+                        <div class="user-img">
+                            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-title">Gym renovation</div>
+                            <p>Admin</p>
+                            <div class="announcement-date">Apr 01, 2024</div>
+                        </div>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="announcement">
+                        <div class="user-img">
+                            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-title">Gym renovation</div>
+                            <p>Admin</p>
+                            <div class="announcement-date">Apr 01, 2024</div>
+                        </div>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
 
     </main>
 
-  </body>
-</html>
+</body>
 
+</html>

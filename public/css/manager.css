@@ -109,6 +109,10 @@ li {
     margin: 0;
 }
 
+.announcement-content {
+    margin-left: 10px;
+}
+
 /* Announcement Icon */
 .announcement i {
     font-size: 2rem;
@@ -119,7 +123,7 @@ li {
 /* Announcement Title */
 .announcement-title {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 300;
     color: #333;
     margin-right: 15px;
 }
