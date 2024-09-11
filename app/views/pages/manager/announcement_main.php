@@ -25,70 +25,10 @@
 
     <main>
 
-        <div class="add">
-            <h1 class='title'>Announcements</h1>
-            <button>New Announcement</button>
-        </div>
-        <ul>
-            <li>
-                <div>
-                    <div class="announcement">
-                        <div class="user-img">
-                            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                        </div>
-                        <div class="announcement-content">
-                            <div class="announcement-title">Gym renovation</div>
-                            <p>Admin</p>
-                            <div class="announcement-date">Apr 01, 2024</div>
-                        </div>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div>
-                    <div class="announcement">
-                        <div class="user-img">
-                            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                        </div>
-                        <div class="announcement-content">
-                            <div class="announcement-title">Gym renovation</div>
-                            <p>Admin</p>
-                            <div class="announcement-date">Apr 01, 2024</div>
-                        </div>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div>
-                    <div class="announcement">
-                        <div class="user-img">
-                            <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                        </div>
-                        <div class="announcement-content">
-                            <div class="announcement-title">Gym renovation</div>
-                            <p>Admin</p>
-                            <div class="announcement-date">Apr 01, 2024</div>
-                        </div>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+
 
     </main>
-
+    <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
 </body>
 
 </html>

@@ -1,158 +1,138 @@
-/*announcement*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-main {
-    padding-left: 30px;
+.announcement {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Form Label Styles */
-label {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    display: block;
+.ann {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container form {
+    margin-top: 30px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
     color: #333;
 }
 
-/* Form Input Fields */
-input[type="text"],
-input[type="date"],
-input[type="time"],
-textarea {
-    width: 1000px;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
+.form .input-box input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
     font-size: 1rem;
-
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0 15px;
 }
 
-
-/* Radio button container */
-.send-options {
-    margin-bottom: 20px;
+.form .column {
+    display: flex;
+    column-gap: 15px;
 }
 
-.send-options label {
-    margin-right: 15px;
+.form :where(.schedule-option, .send) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap
 }
 
-/* Radio input styles */
-.send-options input[type="radio"] {
+.form .send {
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.send input {
+    accent-color: #2693FF;
+}
+
+.form .schedule-box {
+    margin-top: 20px;
+}
+
+.form :where(.send input, label) {
+    cursor: pointer;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.radio-container input[type="radio"] {
     margin-right: 10px;
 }
 
-/* Submit Button */
-.send-button {
-    background-color: #2693FF;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 150px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.send-button:hover {
-    background-color: #1b67b3;
-}
-
-/*end of the announcemt*/
-/*annoucement_main*/
-.add {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Button Style */
-.add button {
-    padding: 10px 15px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #2693FF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-
-.add button:hover {
-    background-color: #1b67b3;
-}
-
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* List Item */
-li {
-    margin-bottom: 20px;
-}
-
-/* Announcement Container */
-.announcement {
-    display: flex;
-    align-items: center;
+.input-box textarea {
+    width: 100%;
+    height: 150px;
     padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 0;
+    font-size: 1rem;
+    color: #707070;
+    border: 1px solid;
+    border-radius: 6px;
+    outline: none;
+    resize: vertical;
+    margin-top: 8px;
 }
 
-.announcement-content {
-    margin-left: 10px;
-}
-
-/* Announcement Icon */
-.announcement i {
-    font-size: 2rem;
-    color: black;
-    margin-right: 15px;
-}
-
-/* Announcement Title */
-.announcement-title {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #333;
-    margin-right: 15px;
-}
-
-/* Announcement Date */
-.announcement-date {
-    font-size: 0.9rem;
-    color: #2693FF;
-    margin-right: 15px;
-}
-
-/* Buttons Container */
-.buttons {
-    margin-left: auto;
-}
-
-/* Button Styles */
-.buttons button {
-    margin-left: 10px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
+.form button {
+    height: 50px;
+    width: 100%;
+    background-color: #2693FF;
     color: #fff;
-    background-color: #007bff;
+    font-size: 1rem;
+    font-weight: 400;
     border: none;
-    border-radius: 30px;
+    margin-top: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
-.buttons button:hover {
-    background-color: #0056b3;
+.form button:hover {
+    background-color: #3c9eff;
+}
+
+/*Responsive*/
+@media screen and(max-width:500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+
+    .form :where(.schedule-option .send) {
+        row-gap: 15px;
+    }
 }
