@@ -41,7 +41,7 @@ body.dark{
 }
 
 .sidebar{ 
-    position: relative;
+    position: fixed;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -50,6 +50,7 @@ body.dark{
     background: var(--sidebar-color);
     transition: var(--tran-05);
     padding: 24px;
+    z-index: 100;
 }
 
 .sidebar .head{
@@ -179,7 +180,7 @@ body.dark{
     background-color: var(--sidebar-color);
     cursor: pointer;
     transition: var(--tran-03);
-    z-index: 100;
+    z-index: 101;
 }
 
 .menu-btn:hover {
@@ -342,6 +343,10 @@ body.dark .menu .mode i.moon{
     background: var(--toggle-color);
 }
 
+.toggle-switch .switch:hover {
+    background: var(--primary-color);
+}
+
 .switch::before {
     content: "";
     position: absolute;
@@ -384,25 +389,30 @@ main{
     background: var(--body-color);
     transition: var(--tran-05);
     z-index: 1;
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3rem 1fr 2fr;
+    gap: 1.6rem;
 }
 
 main > .title{
+    grid-column: 1 / -1;
+    grid-row: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
     color: var(--text-color);
+}
+
+main > .title > h1{
+    font-size: 2rem;
 }
 
 main > .title > .greeting{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 2rem;
     gap: 1rem;
 }
 
@@ -452,10 +462,11 @@ main > .title > .greeting > .bell-container:hover .notification {
 
 /* Insight Cards */
 main .insights{
+    grid-column: 1;
+    grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
-    margin-left: 2rem;
 }
 
 main .insights > div{
@@ -491,7 +502,7 @@ main .insights > div .middle{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 12.5rem;
+    width: 100%;
 }
 
 main .insights h3{
@@ -504,6 +515,7 @@ main .insights .progress{
     width: 92px;
     height: 92px;
     border-radius: 50%;
+    margin-left: 2rem;
 }
 
 main .insights svg{
@@ -554,11 +566,8 @@ main .insights .progress .number {
 /* Announcements Section */
 
 main .recent-announcements{
-    position: relative;
-    top: -15.3625rem;
-    right: -55rem;
-    max-width: 20rem;
-    margin-left: 2rem;
+    grid-column: 2;
+    grid-row: 2 / span 2;
 }
 
 main .recent-announcements h2{
@@ -612,3 +621,63 @@ main .recent-announcements .announcement .message{
 margin-left: 1rem;
 }
 
+/* CHARTS */
+
+main #chart{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+main #chart .chart-header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #chart .chart-header i{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+main #chart .chart-header i:hover {
+    color: var(--hover-btn);
+}
+
+main #chart .chart-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+main #chart #areaChart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main .recent-announcements {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+    }
+}

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/style.css" />
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/style.css?v=<?php echo time();?>" />
     <!-- ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title><?php echo SITENAME; ?></title>
@@ -29,12 +29,15 @@
           <h2>Hi, John!</h2>
         </div>
       </div>
+
+      <!-- INSIGHTS -->
+
       <div class="insights">
         <div class="members">
           <i class="ph ph-users"></i>
           <div class="middle">
             <div class="left">
-              <h3>Total Members</h3>
+              <h3>Total <br>Members</h3>
               <h1>1049</h1>
             </div>
             <div class="progress">
@@ -54,7 +57,7 @@
           <i class="ph ph-chart-bar"></i>
           <div class="middle">
             <div class="left">
-              <h3>Total Bookings</h3>
+              <h3>Total <br>Bookings</h3>
               <h1>10</h1>
             </div>
             <div class="progress">
@@ -74,7 +77,7 @@
             <i class="ph ph-trend-up"></i>
             <div class="middle">
               <div class="left">
-                <h3>Workouts Created</h3>
+                <h3>Workouts <br>Created</h3>
                 <h1>59</h1>
               </div>
               <div class="progress">
@@ -91,6 +94,7 @@
           <!-- END OF WORKOUTS -->
       </div>
 
+      <!-- RECENT ANNOUNCEMENTS -->
       <div class="recent-announcements">
         <h2>Recent Announcements</h2>
         <div class="announcements">
@@ -126,10 +130,25 @@
           </div>
 
         </div> 
+
       </div>
+
+      <!-- CHARTS -->
+
+      <div id="chart">
+          <div class="chart-header">
+            <h2>Busy Hours</h2>
+            <i class="ph ph-dots-three-circle-vertical"></i>
+          </div>
+          <div id="areaChart"></div>
+      </div>
+
     </main>
 
-    <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
+    <!-- APEX CHARTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.53.0/apexcharts.min.js"></script>
+    <!-- SCRIPT -->
+    <script src="<?php echo URLROOT; ?>/public/js/script.js?v=<?php echo time();?>"></script>
 
   </body>
 </html>
