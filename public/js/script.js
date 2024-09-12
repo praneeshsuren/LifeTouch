@@ -96,7 +96,7 @@ var options = {
     }
 };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
+var chart = new ApexCharts(document.querySelector("#areaChart"), options);
 chart.render();
 
 // Helper Function to generate random data for 17 hours (5 AM to 10 PM)

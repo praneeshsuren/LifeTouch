@@ -623,19 +623,14 @@ margin-left: 1rem;
 
 /* CHARTS */
 
-main #chart{
-    grid-column: 1;
-    grid-row: 3;
-}
-
-main #chart .chart-header {
-    margin-bottom: 1rem;
+main .chart-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 2.5rem;
 }
 
-main #chart .chart-header i{
+main .chart-header i{
     font-size: 1.6rem;
     color: var(--text-color);
     border-radius: 50%;
@@ -643,16 +638,17 @@ main #chart .chart-header i{
     cursor: pointer;
 }
 
-main #chart .chart-header i:hover {
+main .chart-header i:hover {
     color: var(--hover-btn);
 }
 
-main #chart .chart-header h2 {
+main .chart-header h2 {
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
-main #chart #areaChart{
+main #areaChart{
+    margin-bottom: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
