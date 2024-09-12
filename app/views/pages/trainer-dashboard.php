@@ -135,13 +135,11 @@
 
       <!-- CHARTS -->
 
-      <div id="chart">
-          <div class="chart-header">
-            <h2>Busy Hours</h2>
-            <i class="ph ph-dots-three-circle-vertical"></i>
-          </div>
-          <div id="areaChart"></div>
+      <div class="chart-header">
+        <h2>Busy Hours</h2>
+        <i class="ph ph-dots-three-circle-vertical"></i>
       </div>
+      <div id="areaChart"></div>
 
     </main>
 
