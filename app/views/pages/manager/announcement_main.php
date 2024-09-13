@@ -25,9 +25,120 @@
 
     <main>
 
+        <h1 class="title">Create new annoucement</h1>
+        <div class="announcement">
+            <div class="ann">
+                <section class="container">
+                    <div class="search">
+                        <input type="text" name="search" placeholder="search here">
+                        <label for="search"><i class="ph ph-magnifying-glass"></i></label>
+                    </div>
+                    <div class="bell">
+                        <i class="ph ph-bell"></i>
+                    </div>
+                    <div class="tables">
+                        <div class="last-announcement">
+                            <div class="heading">
+                                <h2>Announcements</h2>
+                                <a href="#" class="btn">New Announcement</a>
+                            </div>
+                            <table class="list">
+                                <thead>
+                                    <td>Photo</td>
+                                    <td>Name</td>
+                                    <td>Title</td>
+                                    <td>Date</td>
+                                    <td>Actions</td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
+                                        <td>Jone Doe</td>
+                                        <td>Gym renovation</td>
+                                        <td>Apr 01 2024</td>
+                                        <td>
+                                            <i class="ph ph-eye"></i>
+                                            <i class="ph ph-pen"></i>
+                                            <i class="ph ph-trash"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
+                </section>
+            </div>
+        </div>
 
     </main>
+
     <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
 </body>
 
