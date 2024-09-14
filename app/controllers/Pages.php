@@ -18,6 +18,10 @@
             $this->view('trainer-dashboard');
         }
 
+        public function trainerAnnouncements(){
+            $this->view('trainer-announcements');
+        }
+
         public function test(){
             $users = $this->pagesModel->getPages();
 
