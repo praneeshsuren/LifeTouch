@@ -17,6 +17,12 @@
         public function trainer(){
             $this->view('trainer-dashboard');
         }
+        public function member(){
+            $this->view('member-dashboard');
+        }
+        public function memberviewtrainer(){
+            $this->view('member-viewtrainer');
+        }
 
         public function test(){
             $users = $this->pagesModel->getPages();
