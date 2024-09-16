@@ -27,6 +27,10 @@
             $this->view('member-announcements');
         }
 
+        public function trainerAnnouncements(){
+            $this->view('trainer-announcements');
+        }
+
         public function test(){
             $users = $this->pagesModel->getPages();
 
