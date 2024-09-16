@@ -25,7 +25,13 @@
 
     <main>
 
-        <h1 class="title">Create new annoucement</h1>
+        <div class="top">
+            <h1 class="title">Create new announcement</h1>
+            <div class="bell">
+                <i class="ph ph-bell"></i>
+                <p>Hi, John!</p>
+            </div>
+        </div>
         <div class="announcement">
             <div class="ann">
                 <section class="container">
@@ -33,27 +39,33 @@
                         <input type="text" name="search" placeholder="search here">
                         <label for="search"><i class="ph ph-magnifying-glass"></i></label>
                     </div>
-                    <div class="bell">
-                        <i class="ph ph-bell"></i>
-                    </div>
+
                     <div class="tables">
                         <div class="last-announcement">
                             <div class="heading">
                                 <h2>Announcements</h2>
-                                <a href="#" class="btn">New Announcement</a>
+                                <a href="announcement" class="btn">New Announcement</a>
                             </div>
                             <table class="list">
                                 <thead>
-                                    <td>Photo</td>
-                                    <td>Name</td>
-                                    <td>Title</td>
-                                    <td>Date</td>
-                                    <td>Actions</td>
+                                    <tr>
+                                        <td>Person</td>
+                                        <td>Title</td>
+                                        <td>Date</td>
+                                        <td>Actions</td>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
+                                        <td>
+                                            <div class="person">
+                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                                <div class="person-info">
+                                                    <h4>John Doe</h4>
+                                                    <small class="email">john@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>Gym renovation</td>
                                         <td>Apr 01 2024</td>
                                         <td>
@@ -62,9 +74,17 @@
                                             <i class="ph ph-trash"></i>
                                         </td>
                                     </tr>
+
                                     <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
+                                        <td>
+                                            <div class="person">
+                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                                <div class="person-info">
+                                                    <h4>John Doe</h4>
+                                                    <small class="email">john@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>Gym renovation</td>
                                         <td>Apr 01 2024</td>
                                         <td>
@@ -73,9 +93,17 @@
                                             <i class="ph ph-trash"></i>
                                         </td>
                                     </tr>
+
                                     <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
+                                        <td>
+                                            <div class="person">
+                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                                <div class="person-info">
+                                                    <h4>John Doe</h4>
+                                                    <small class="email">john@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>Gym renovation</td>
                                         <td>Apr 01 2024</td>
                                         <td>
@@ -84,9 +112,17 @@
                                             <i class="ph ph-trash"></i>
                                         </td>
                                     </tr>
+
                                     <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
+                                        <td>
+                                            <div class="person">
+                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                                <div class="person-info">
+                                                    <h4>John Doe</h4>
+                                                    <small class="email">john@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>Gym renovation</td>
                                         <td>Apr 01 2024</td>
                                         <td>
@@ -95,9 +131,17 @@
                                             <i class="ph ph-trash"></i>
                                         </td>
                                     </tr>
+
                                     <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
+                                        <td>
+                                            <div class="person">
+                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                                <div class="person-info">
+                                                    <h4>John Doe</h4>
+                                                    <small class="email">john@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>Gym renovation</td>
                                         <td>Apr 01 2024</td>
                                         <td>
@@ -106,28 +150,7 @@
                                             <i class="ph ph-trash"></i>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt=""></td>
-                                        <td>Jone Doe</td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>

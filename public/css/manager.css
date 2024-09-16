@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 .announcement {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .ann {
@@ -25,6 +26,14 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Dark Mode for .container */
+body.dark .container {
+    background-color: #2E2E2E;
+    color: #CCC;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
 .container form {
     margin-top: 30px;
 }
@@ -36,6 +45,18 @@
 
 .input-box label {
     color: #333;
+}
+
+body.dark .input-box label {
+    color: #CCC;
+}
+
+body.dark input {
+    background-color: #CCC;
+}
+
+body.dark textarea {
+    background-color: #CCC;
 }
 
 .form .input-box input {
@@ -91,6 +112,14 @@
     transition: border-color 0.3s;
 }
 
+body.dark .radio-container {
+    background-color: #CCC;
+}
+
+body.dark label {
+    color: #707070;
+}
+
 .radio-container input[type="radio"] {
     margin-right: 10px;
 }
@@ -138,13 +167,14 @@
 }
 
 /*annoumcement main*/
-
 .search {
     position: relative;
     max-width: 400px;
     margin-left: 20px;
-    margin-bottom: 50px
+    margin-bottom: 10px
 }
+
+
 
 .search input {
     width: 100%;
@@ -161,17 +191,49 @@
 .search label {
     position: absolute;
     right: 15px;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     pointer-events: none;
+    cursor: pointer;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.bell {
+    display: flex;
+    align-items: center;
 }
 
 .bell i {
-    position: absolute;
-    right: 15px;
-    top: 10px;
+    font-size: 20px;
+    margin-right: 8px;
     cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.bell p {
+    margin: 0;
+    cursor: pointer;
+    color: #757575;
+}
+
 
 .tables {
     width: 100%;
@@ -201,6 +263,12 @@
     margin: 0 auto;
 }
 
+/* Dark Mode for .last-announcement */
+body.dark .last-announcement {
+    background-color: #3C3C3C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 
 .heading {
     display: flex;
@@ -209,12 +277,19 @@
     color: #444;
 }
 
+/* Dark Mode for .heading */
+body.dark .heading {
+    color: #CCC;
+}
+
+
 .btn {
     padding: 5px 10px;
     background: #2693FF;
     color: #fff;
     text-decoration: none;
     text-align: center;
+    border-radius: 10px;
 }
 
 .table {
@@ -231,7 +306,10 @@ thead td {
     color: #333;
 }
 
-
+/* Dark Mode for .heading */
+body.dark thead td {
+    color: #CCC;
+}
 
 table tbody tr:last-child {
     border-bottom: none;
@@ -239,7 +317,14 @@ table tbody tr:last-child {
 
 td {
     padding: 9px 30px;
+    font-size: 15px;
 }
+
+/* Dark Mode for .tr */
+body.dark .list tr {
+    color: #CCC;
+}
+
 
 td i {
     padding: 7px;
@@ -253,9 +338,49 @@ td i {
     text-align: left;
 }
 
-.list tr:hover {
-    background: #444;
-    color: #fff;
+.list tbody tr:hover {
+    background: #dadada;
+
+}
+
+body.dark .list tbody tr:hover {
+    background-color: #707070;
+}
+
+
+.person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+
+}
+
+.person img.preview-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.person-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Dark Mode for h4 */
+body.dark .person-info h4 {
+    color: #CCC;
+}
+
+
+.person-info small {
+    display: block;
+    color: #2693FF;
+    font-size: 14px;
+    margin-top: 4px;
 }
 
 .last-announcement table tbody td:last-child {
@@ -331,4 +456,151 @@ td i {
     .list th {
         padding: 6px;
     }
+}
+
+/*report*/
+.dropdown-container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+body.dark .dropdown-container {
+    background-color: #2E2E2E;
+    color: #CCC;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-boxes {
+    padding: 10px;
+    border: #bdbdbd 1px solid;
+    border-radius: 4px;
+    background-color: #FFF;
+    width: 50%;
+}
+
+.row {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.heading h3 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.heading1 h3 {
+    color: #444;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+body.dark .heading h3 {
+    color: #CCC;
+}
+
+body.dark .heading1 h3 {
+    color: #CCC;
+}
+
+.chart {
+    width: 600px;
+    height: 300px;
+    display: block;
+}
+
+.numbers {
+    color: #444;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
+
+body.dark .numbers {
+    color: #CCC;
+}
+
+.numbers li {
+    list-style: none;
+    height: 150px;
+    position: relative;
+    bottom: 145px;
+}
+
+.numbers span {
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.bars {
+    color: #444;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #737373;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 10px 0 #555;
+    border-radius: 5px;
+}
+
+.bars li {
+    display: table-cell;
+    width: 100px;
+    height: 300px;
+    position: relative;
+}
+
+.bars span {
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    white-space: nowrap;
+    bottom: -20px;
+}
+
+body.dark .bars span {
+    color: #CCC;
+}
+
+.bars .bar {
+    display: block;
+    background: #17C0EB;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.bars .bar:hover {
+    background: #55EFC4;
+    box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+    cursor: pointer;
+}
+
+.bars .bar::before {
+    color: #fff;
+    content: attr(data-percentage)'%';
+    position: relative;
+    bottom: 20px;
 }

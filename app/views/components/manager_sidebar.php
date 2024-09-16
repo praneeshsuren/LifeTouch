@@ -36,13 +36,13 @@
                         <a href="#">
                             <span class="text">Trainers</span>
                         </a>
-                    </li> 
+                    </li>
                     <li>
                         <a href="#">
                             <span class="text">Admin</span>
                         </a>
-                    </li> 
-                </ul> 
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#">
@@ -51,14 +51,14 @@
                 </a>
             </li>
             <li>
-                <a href="announcement">
-                <i class="ph ph-megaphone"></i>
+                <a href="announcement_main">
+                    <i class="ph ph-megaphone"></i>
                     <span class="text">Post Announcements</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                <i class="ph ph-files"></i>
+                <a href="report">
+                    <i class="ph ph-files"></i>
                     <span class="text">View Reports</span>
                 </a>
             </li>
