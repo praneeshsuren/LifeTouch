@@ -17,11 +17,14 @@
         public function trainer(){
             $this->view('trainer-dashboard');
         }
-        public function member(){
+        public function memberDashboard(){
             $this->view('member-dashboard');
         }
-        public function memberviewtrainer(){
+        public function memberViewtrainer(){
             $this->view('member-viewtrainer');
+        }
+        public function memberAnnouncements(){
+            $this->view('member-announcements');
         }
 
         public function test(){

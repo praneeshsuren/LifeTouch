@@ -34,6 +34,12 @@
             </li>
             <li>
                 <a href="#">
+                    <i class='icon ph-bold ph-newspaper'></i>
+                    <span class="text">View Announcements</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
                     <i class='icon ph-bold ph-flask'></i>
                     <span class="text">Supplements</span>
                 </a>

@@ -127,20 +127,9 @@
         </div>      
       </div>
 
-      <!-- CHARTS -->
-      <div class="chart-header">
-        <h2>Busy Hours</h2>
-        <i class="ph ph-dots-three-circle-vertical">/i>
-      </div>
-      <div id="areaChart"></div>
-
     </main>
 
-    <!-- APEX CHARTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/
-    apexcharts/3.53.0/apexcharts.min.js"></script>
     <!-- SCRIPT -->
-
     <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
 
   </body>
