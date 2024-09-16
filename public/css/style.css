@@ -392,7 +392,7 @@ main{
     z-index: 1;
     padding: 1.5rem 2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns:2fr 1fr;
     grid-template-rows: 3rem 1fr 2fr;
     gap: 1.6rem;
 }
@@ -622,3 +622,78 @@ main .recent-announcements .announcement .message{
 margin-left: 1rem;
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main .recent-announcements {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*member-view trainer-section*/
+
+.member-view-trainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem;
+    margin:0;
+    padding: 1.5rem;
+}
+.trainer{
+    color: var(--hover-btn);
+    background: var(--sidebar-color);
+    padding: 2rem;
+    border-radius: 40px;
+    box-shadow: var(--box-shadow-color);
+    transition: var(--tran-03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.trainer:hover{
+    background: var(--separator-color);
+}
+  
+.trainer-image {
+    border-radius: 50%;
+    width: 120px; /* Increased width */
+    height: 120px; /* Increased height */
+    object-fit: cover;
+    margin-bottom: 1rem; /* Adds space between the image and the button */
+}
+  
+.member-view-trainer .member-view-trainer-btn {
+    background-color: var(--primary-color);
+    color:white;
+    padding: 12px 20px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem; 
+    transition: background-color 0.3s ease;
+}
+  
+.member-view-trainer .member-view-trainer-btn:hover {
+    color:var(--text-color);
+    background: var(--primary-color-light);
+}
