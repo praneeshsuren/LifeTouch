@@ -22,31 +22,31 @@
     
     <main>
       <div class="title">
-        <h1>View Trainer</h1>
+        <h1>View Supplements</h1>
         <div class="greeting">
           <span class="bell-container"><i class="ph ph-bell notification"></i></span>
           <h2>Hi, John!</h2>
         </div>
       </div>
-      <!-- View-trianer-section-->
+      <!-- View-supplements-section-->
         <?php
-          $trianers=[
-            ['name' => 'John', 'image' => 'image.png'],
-            ['name' => 'John', 'image' => 'image.png'],
-            ['name' => 'John', 'image' => 'image.png'],
-            ['name' => 'John', 'image' => 'image.png'],
-            ['name' => 'John', 'image' => 'image.png'],
-            ['name' => 'John', 'image' => 'image.png'],
-            ['name' => 'John', 'image' => 'image.png'],
+          $supplements=[
+            ['name' => 'Dumbell', 'image' => 'image.png'],
+            ['name' => 'Dumbell', 'image' => 'image.png'],
+            ['name' => 'Dumbell', 'image' => 'image.png'],
+            ['name' => 'Dumbell', 'image' => 'image.png'],
+            ['name' => 'Dumbell', 'image' => 'image.png'],
+            ['name' => 'Dumbell', 'image' => 'image.png'],
+            ['name' => 'Dumbell', 'image' => 'image.png'],
           ];
           ?>
-      <div class="member-view-trainer-grid-container">
-      <div class="member-view-trainer">
-        <?php foreach($trianers as $trainer):?>
-        <div class="trainer">
-          <img src="<?php echo URLROOT; ?>/public/images/<?php echo $trainer['image']; ?>" alt="" class="trainer-image"/>
-           <h3><?php echo $trainer['name']; ?></h3>
-           <button class="member-view-trainer-btn">View</button>
+      <div class="member-supplements-grid-container">
+      <div class="member-supplements">
+        <?php foreach($supplements as $supplement):?>
+        <div class="supplement">
+          <img src="<?php echo URLROOT; ?>/public/images/<?php echo $supplement['image']; ?>" alt="" class="supplement-image"/>
+           <h3><?php echo $supplement['name']; ?></h3>
+           <button class="member-supplements-btn">View</button>
         </div>
         <?php endforeach; ?>
       </div>

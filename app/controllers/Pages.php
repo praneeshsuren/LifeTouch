@@ -26,7 +26,9 @@
         public function memberAnnouncements(){
             $this->view('member-announcements');
         }
-
+        public function memberSupplements(){
+            $this->view('member-supplements');
+        }
         public function trainerAnnouncements(){
             $this->view('trainer-announcements');
         }
