@@ -13,7 +13,7 @@ function removeActiveClass() {
 
 // Add click event listener to each menu item
 menuItems.forEach(item => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', function() {
         // Remove the active class from all items
         removeActiveClass();
 
@@ -42,9 +42,9 @@ menuButton.addEventListener('click', function () {
 modeSwitch.addEventListener('click', () => {
     body.classList.toggle('dark');
 
-    if (body.classList.contains('dark')) {
+    if(body.classList.contains('dark')) {
         modeText.innerText = 'Light Mode';
-    } else {
+    }else{
         modeText.innerText = 'Dark Mode';
     }
 });

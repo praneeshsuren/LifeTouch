@@ -6,7 +6,7 @@
         <img src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
     </div>
     <div class="user-details">
-        <p class="name">Trainer</p>
+        <p class="name">Member</p>
         <p class="post">John Doe</p>
     </div>
 </div>
@@ -15,7 +15,7 @@
         <p class="title">Main</p>
         <ul>
             <li>
-                <a href="<?php echo URLROOT; ?>/trainer/dashboard">
+                <a href="#">
                     <i class='icon ph-bold ph-house-simple'></i>
                     <span class="text">Dashboard</span>
                 </a>
@@ -23,38 +23,31 @@
             <li>
                 <a href="#">
                     <i class='icon ph-bold ph-user'></i>
-                    <span class="text">Users</span>
-                    <i class='arrow ph-bold ph-caret-down'></i>
+                    <span class="text">View trainer</span>
                 </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="#">
-                            <span class="text">Members</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="text">Trainers</span>
-                        </a>
-                    </li> 
-                </ul> 
             </li>
             <li>
                 <a href="#">
                     <i class='icon ph-bold ph-barbell'></i>
-                    <span class="text">Workouts</span>
+                    <span class="text">Workout schedules</span>
                 </a>
             </li>
             <li>
-                <a href="<?php echo URLROOT; ?>/trainer/announcements">
+                <a href="#">
                     <i class='icon ph-bold ph-newspaper'></i>
                     <span class="text">View Announcements</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class='icon ph-bold ph-calendar-dots'></i>
-                    <span class="text">View Calendar</span>
+                    <i class='icon ph-bold ph-flask'></i>
+                    <span class="text">Supplements</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='icon ph-bold ph-credit-card'></i>
+                    <span class="text">Payment</span>
                 </a>
             </li>
         </ul>
