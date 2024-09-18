@@ -21,20 +21,24 @@
     </section>
     
     <main>
+
       <div class="title">
+        
         <h1>Dashboard</h1>
         <div class="greeting">
           <<span class="bell-container"><i class="ph ph-bell notification"></i></span>
           <h2>Hi, John!</h2>
         </div>
+
       </div>
+
       <div class="insights">
 
         <div class="members">
           <i class="ph ph-users"></i>
           <div class="middle">
             <div class="left">
-              <h3>Total Attendance</h3>
+              <h3>Total Members</h3>
               <h1>20</h1>
             </div>
             <div class="progress">
@@ -54,7 +58,7 @@
           <i class="ph ph-chart-bar"></i>
           <div class="middle">
             <div class="left">
-              <h3>New workouts</h3>
+              <h3>Total Bookings</h3>
               <h1>10</h1>
             </div>
             <div class="progress">
@@ -68,29 +72,32 @@
           </div>
           <small class="text-muted">Last 30 days</small>
         </div>
-          <!-- END OF NEW WORKOUTS -->
+        <!-- END OF BOOKINGS -->
 
-          <div class="workouts">
-            <i class="ph ph-trend-up"></i>
-            <div class="middle">
-              <div class="left">
-                <h3>Workouts completed</h3>
-                <h1>10</h1>
-              </div>
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="38"></circle>
-                </svg>
-                <div class="number">
-                  <p>50%</p>
-                </div>
+        <div class="workouts">
+          <i class="ph ph-trend-up"></i>
+          <div class="middle">
+            <div class="left">
+              <h3>Workouts Created</h3>
+              <h1>10</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="38"></circle>
+              </svg>
+              <div class="number">
+                <p>75%</p>
               </div>
             </div>
-            <small class="text-muted">Last 30 days</small>
           </div>
-          <!-- END OF WORKOUTS -->
+          <small class="text-muted">Last 30 days</small>
+        </div>
+        <!-- END OF WORKOUTS -->
+
       </div>
+
       <div class="recent-announcements">
+
         <h2>Recent Announcements</h2>
         <div class="announcements">
 
@@ -124,7 +131,8 @@
             </div>
           </div>
 
-        </div>      
+        </div>  
+
       </div>
 
       <!-- CHARTS -->
@@ -142,6 +150,7 @@
 
     <!-- SCRIPT -->
     <script src="<?php echo URLROOT; ?>/public/js/trainer-script.js?v=<?php echo time();?>"></script>
+    
   </body>
 </html>
 
