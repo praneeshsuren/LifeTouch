@@ -180,12 +180,19 @@ function updateChartTheme(isDarkMode) {
     });
 }
 
+let mode = localStorage.getItem('mode');
+if (mode === 'dark') {
+    body.classList.add('dark');
+    modeText.innerText = 'Light Mode';
+}
+
 // Toggle Dark/Light Mode
 modeSwitch.addEventListener('click', () => {
     body.classList.toggle('dark');
     const isDarkMode = body.classList.contains('dark');
     
     modeText.innerText = isDarkMode ? 'Light Mode' : 'Dark Mode';
+    localStorage.setItem('mode', isDarkMode ? 'dark' : 'light');
     updateChartTheme(isDarkMode);
 });
 
