@@ -212,6 +212,6 @@
         <!-- APEX CHARTS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.53.0/apexcharts.min.js"></script>
         <!-- SCRIPT -->
-        <script src="<?php echo URLROOT; ?>/public/js/script.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo URLROOT; ?>/public/js/trainer-script.js?v=<?php echo time();?>"></script>
     </body>
 </html>
