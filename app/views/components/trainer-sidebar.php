@@ -15,7 +15,7 @@
         <p class="title">Main</p>
         <ul>
             <li>
-                <a href="#">
+                <a href="<?php echo URLROOT; ?>/trainer/dashboard">
                     <i class='icon ph-bold ph-house-simple'></i>
                     <span class="text">Dashboard</span>
                 </a>
@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<?php echo URLROOT; ?>/trainer/announcements">
                     <i class='icon ph-bold ph-newspaper'></i>
                     <span class="text">View Announcements</span>
                 </a>
