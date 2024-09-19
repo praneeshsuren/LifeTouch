@@ -1,7 +1,3 @@
-<?php
-$reportTypes = ['Type 01', 'Type 02', 'Type 03', 'Type 04'];
-$dataRange = ['Range 01', 'Range 02', 'Range 03', 'Range 04'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +11,7 @@ $dataRange = ['Range 01', 'Range 02', 'Range 03', 'Range 04'];
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/style.css" />
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/manager.css" />
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/manager-style.css" />
     <!-- ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title><?php echo SITENAME; ?></title>
@@ -39,12 +34,6 @@ $dataRange = ['Range 01', 'Range 02', 'Range 03', 'Range 04'];
             </div>
         </div>
 
-        <?php
-        $reportTypes = ['Type 01', 'Type 02', 'Type 03', 'Type 04'];
-        $dataRange = ['Range 01', 'Range 02', 'Range 03', 'Range 04'];
-
-        ?>
-
         <div class="dropdown-container">
             <div class="heading">
                 <h2>View Report</h2>
@@ -53,12 +42,44 @@ $dataRange = ['Range 01', 'Range 02', 'Range 03', 'Range 04'];
 
             <div class="row">
                 <label for="type-list">Report Types</label><br>
-                <select name="type" id="type-list" class="input-boxes">
-                    <option value disabled selected>Select a report type</option>
-                    <?php foreach ($reportTypes as $type): ?>
-                        <option value="<?php echo $type; ?>"><?php echo $type; ?></option>
-                    <?php endforeach; ?>
-                </select>
+                <div class="select">
+                    <div
+                        class="selected"
+                        data-default="Type 01"
+                        data-one="Type 02"
+                        data-two="Type 03"
+                        data-three="Type 04">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 512 512"
+                            class="arrow">
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                        </svg>
+                    </div>
+                    <div class="options">
+                        <div title="all">
+                            <input id="all" name="option" type="radio" checked="" />
+                            <label class="option" for="all" data-txt="Type 01"></label>
+                        </div>
+                        <div title="option-1">
+                            <input id="option-1" name="option" type="radio" />
+                            <label class="option" for="option-1" data-txt="Type 02"></label>
+                        </div>
+                        <div title="option-2">
+                            <input id="option-2" name="option" type="radio" />
+                            <label class="option" for="option-2" data-txt="Type 03"></label>
+                        </div>
+                        <div title="option-3">
+                            <input id="option-3" name="option" type="radio" />
+                            <label class="option" for="option-3" data-txt="Type 04"></label>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
             <div class="row">
                 <label for="type-list">Data Range</label><br>
@@ -129,7 +150,7 @@ $dataRange = ['Range 01', 'Range 02', 'Range 03', 'Range 04'];
             });
         });
     </script>
-    <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/manager-script.js"></script>
 </body>
 
 </html>

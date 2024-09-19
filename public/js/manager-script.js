@@ -13,17 +13,17 @@ function removeActiveClass() {
 
 // Add click event listener to each menu item
 menuItems.forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         // Remove the active class from all items
         removeActiveClass();
 
         // Add the active class to the clicked item
         item.parentElement.classList.add('active');
-        
+
         // Toggle sub-menu if it exists
         const subMenu = item.nextElementSibling;
         if (subMenu && subMenu.classList.contains('sub-menu')) {
-            
+
             subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
         }
 
@@ -34,7 +34,7 @@ menuItems.forEach(item => {
     });
 });
 
-menuButton.addEventListener('click', function() {
+menuButton.addEventListener('click', function () {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('active');
 });
@@ -42,9 +42,9 @@ menuButton.addEventListener('click', function() {
 modeSwitch.addEventListener('click', () => {
     body.classList.toggle('dark');
 
-    if(body.classList.contains('dark')) {
-      modeText.innerText = 'Light Mode';
-    }else{
+    if (body.classList.contains('dark')) {
+        modeText.innerText = 'Light Mode';
+    } else {
         modeText.innerText = 'Dark Mode';
     }
-  });
+});
