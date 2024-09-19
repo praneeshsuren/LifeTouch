@@ -32,131 +32,141 @@
                 <p>Hi, John!</p>
             </div>
         </div>
+        <form class="search">
+            <button>
+                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <div class="search-input">
+                <input class="input" placeholder="Search here..." required="" type="text">
+            </div>
+            <button class="reset" type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </form>
         <div class="announcement">
             <div class="ann">
-                <section class="container">
-                    <div class="search">
-                        <input type="text" name="search" placeholder="search here">
-                        <label for="search"><i class="ph ph-magnifying-glass"></i></label>
-                    </div>
 
-                    <div class="tables">
-                        <div class="last-announcement">
-                            <div class="heading">
-                                <h2>Announcements</h2>
-                                <a href="announcement" class="btn">New Announcement</a>
-                            </div>
-                            <table class="list">
-                                <thead>
-                                    <tr>
-                                        <td>Person</td>
-                                        <td>Title</td>
-                                        <td>Date</td>
-                                        <td>Actions</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="person">
-                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                                                <div class="person-info">
-                                                    <h4>John Doe</h4>
-                                                    <small class="email">john@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
 
-                                    <tr>
-                                        <td>
-                                            <div class="person">
-                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                                                <div class="person-info">
-                                                    <h4>John Doe</h4>
-                                                    <small class="email">john@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="person">
-                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                                                <div class="person-info">
-                                                    <h4>John Doe</h4>
-                                                    <small class="email">john@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="person">
-                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                                                <div class="person-info">
-                                                    <h4>John Doe</h4>
-                                                    <small class="email">john@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="person">
-                                                <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
-                                                <div class="person-info">
-                                                    <h4>John Doe</h4>
-                                                    <small class="email">john@gmail.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Gym renovation</td>
-                                        <td>Apr 01 2024</td>
-                                        <td>
-                                            <i class="ph ph-eye"></i>
-                                            <i class="ph ph-pen"></i>
-                                            <i class="ph ph-trash"></i>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
+                <div class="tables">
+                    <div class="last-announcement">
+                        <div class="heading">
+                            <h2>Announcements</h2>
+                            <a href="announcement" class="btn">New Announcement</a>
                         </div>
-                    </div>
+                        <br>
+                        <table class="list">
+                            <thead>
+                                <tr>
+                                    <td>Person</td>
+                                    <td>Title</td>
+                                    <td>Date</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="person">
+                                            <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                            <div class="person-info">
+                                                <h4>John Doe</h4>
+                                                <small class="email">john@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gym renovation</td>
+                                    <td>Apr 01 2024</td>
+                                    <td>
+                                        <i class="ph ph-eye"></i>
+                                        <i class="ph ph-pen"></i>
+                                        <i class="ph ph-trash"></i>
+                                    </td>
+                                </tr>
 
-                </section>
+                                <tr>
+                                    <td>
+                                        <div class="person">
+                                            <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                            <div class="person-info">
+                                                <h4>John Doe</h4>
+                                                <small class="email">john@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gym renovation</td>
+                                    <td>Apr 01 2024</td>
+                                    <td>
+                                        <i class="ph ph-eye"></i>
+                                        <i class="ph ph-pen"></i>
+                                        <i class="ph ph-trash"></i>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="person">
+                                            <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                            <div class="person-info">
+                                                <h4>John Doe</h4>
+                                                <small class="email">john@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gym renovation</td>
+                                    <td>Apr 01 2024</td>
+                                    <td>
+                                        <i class="ph ph-eye"></i>
+                                        <i class="ph ph-pen"></i>
+                                        <i class="ph ph-trash"></i>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="person">
+                                            <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                            <div class="person-info">
+                                                <h4>John Doe</h4>
+                                                <small class="email">john@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gym renovation</td>
+                                    <td>Apr 01 2024</td>
+                                    <td>
+                                        <i class="ph ph-eye"></i>
+                                        <i class="ph ph-pen"></i>
+                                        <i class="ph ph-trash"></i>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="person">
+                                            <img class="preview-image" src="<?php echo URLROOT; ?>/public/images/image.png" alt="">
+                                            <div class="person-info">
+                                                <h4>John Doe</h4>
+                                                <small class="email">john@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gym renovation</td>
+                                    <td>Apr 01 2024</td>
+                                    <td>
+                                        <i class="ph ph-eye"></i>
+                                        <i class="ph ph-pen"></i>
+                                        <i class="ph ph-trash"></i>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 

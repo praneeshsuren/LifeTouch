@@ -28,7 +28,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="#">
+                        <a href="member">
                             <span class="text">Members</span>
                         </a>
                     </li>

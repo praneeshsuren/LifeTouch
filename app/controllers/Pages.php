@@ -40,6 +40,22 @@ class Pages extends Controller
     {
         $this->view('manager/report_main');
     }
+    public function member()
+    {
+        $this->view('manager/member');
+    }
+    public function member_view()
+    {
+        $this->view('manager/member_view');
+    }
+    public function member_edit()
+    {
+        $this->view('manager/member_edit');
+    }
+    public function member_create()
+    {
+        $this->view('manager/member_create');
+    }
 
     public function test()
     {

@@ -12,8 +12,8 @@
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-
+    justify-content: flex-start;
+    padding-left: 100px;
 }
 
 .container {
@@ -140,8 +140,8 @@ body.dark label {
 .form button {
     height: 50px;
     width: 100%;
-    background-color: #2693FF;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: white;
     font-size: 1rem;
     font-weight: 400;
     border: none;
@@ -152,8 +152,16 @@ body.dark label {
 }
 
 .form button:hover {
-    background-color: #3c9eff;
+    color: var(--text-color);
+    background: var(--primary-color-light);
+
 }
+
+body.dark form button:hover {
+    background-color: #636363;
+}
+
+
 
 /*Responsive*/
 @media screen and(max-width:500px) {
@@ -166,6 +174,7 @@ body.dark label {
     }
 }
 
+/*end of the announcemt*/
 /*annoumcement main*/
 .search {
     position: relative;
@@ -173,8 +182,6 @@ body.dark label {
     margin-left: 20px;
     margin-bottom: 10px
 }
-
-
 
 .search input {
     width: 100%;
@@ -284,13 +291,30 @@ body.dark .heading {
 
 
 .btn {
-    padding: 5px 10px;
-    background: #2693FF;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    /* Increased padding for a larger button */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
     text-decoration: none;
     text-align: center;
-    border-radius: 10px;
 }
+
+.btn:hover {
+    color: var(--text-color);
+    background: var(--primary-color-light);
+}
+
+body.dark .btn {
+    background-color: #636363;
+}
+
+
 
 .table {
     margin-top: 10px;
@@ -339,12 +363,12 @@ td i {
 }
 
 .list tbody tr:hover {
-    background: #dadada;
+    background: #f1f1f1;
 
 }
 
 body.dark .list tbody tr:hover {
-    background-color: #707070;
+    background-color: #4d4d4dd3;
 }
 
 
@@ -458,8 +482,10 @@ body.dark .person-info h4 {
     }
 }
 
+/*end of the announcement_main*/
 /*report*/
-.dropdown-container {
+.dropdown-container,
+.box {
     position: relative;
     max-width: 900px;
     width: 100%;
@@ -472,6 +498,12 @@ body.dark .person-info h4 {
 }
 
 body.dark .dropdown-container {
+    background-color: #2E2E2E;
+    color: #CCC;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .box {
     background-color: #2E2E2E;
     color: #CCC;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -549,14 +581,20 @@ body.dark .numbers {
     color: #444;
     font-size: 12px;
     font-weight: 600;
-    background-color: #737373;
+    background-color: #fefefe;
     margin: 0;
     padding: 0;
     display: inline-block;
     width: 500px;
     height: 300px;
-    box-shadow: 0 0 10px 0 #555;
+    box-shadow: 0 0 10px 0 #bbbbbc;
     border-radius: 5px;
+}
+
+body.dark .bars {
+    color: #444;
+    background-color: #737373;
+    box-shadow: 0 0 10px 0 #555;
 }
 
 .bars li {
@@ -599,8 +637,808 @@ body.dark .bars span {
 }
 
 .bars .bar::before {
-    color: #fff;
+    color: black;
     content: attr(data-percentage)'%';
     position: relative;
     bottom: 20px;
 }
+
+body.dark .bars .bar::before {
+    color: #CCC;
+    content: attr(data-percentage)'%';
+}
+
+/*end of the report*/
+/*member */
+.member-view-trainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    margin: 0 2rem;
+}
+
+.member-view-trainer>div {
+    color: var(--hover-btn);
+    background: var(--sidebar-color);
+    padding: 2rem;
+    border-radius: 40px;
+    box-shadow: var(--box-shadow-color);
+    transition: var(--tran-03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.member-view-trainer>div:hover {
+    background: var(--separator-color);
+}
+
+.trainer-image {
+    border-radius: 50%;
+    width: 120px;
+    /* Increased width */
+    height: 120px;
+    /* Increased height */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    /* Adds space between the image and the button */
+}
+
+.member-view-trainer .member-view-trainer-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    /* Increased padding for a larger button */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.member-view-trainer .member-view-trainer-btn:hover {
+    color: var(--text-color);
+    background: var(--primary-color-light);
+}
+
+.newMember {
+    display: flex;
+    justify-content: space-between;
+    /* Space out child elements */
+    align-items: center;
+    /* Align items vertically center */
+}
+
+.search button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+/* styling of whole input container */
+.search {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+}
+
+/* styling of Input */
+.search-input .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+/* styling of animated border */
+.search:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.search:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+.search-input input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+.search:focus-within:before {
+    transform: scale(1);
+}
+
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* close button shown when typing */
+.search-input input:not(:placeholder-shown)~.reset {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* sizing svg icons */
+.search svg {
+    width: 17px;
+    margin-top: 3px;
+}
+
+.newMember-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.newMember-btn:hover {
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+}
+
+.newMember {
+    display: flex;
+}
+
+
+.newMember-btn:hover {
+    color: var(--text-color);
+    background: var(--primary-color-light);
+}
+
+body.dark .newMember-btn {
+    background-color: #636363;
+}
+
+/* end-member */
+/*member_view*/
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Dark mode for table header */
+body.dark .profile-table th {
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* Stripes for header */
+.profile-table thead tr th {
+    background-color: #e9e9e9;
+}
+
+/* Stripes for data rows */
+.profile-table tr:nth-child(odd) td {
+    background-color: #f0f0f0;
+}
+
+.profile-table tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+
+.profile-table tr:hover td {
+    background-color: #f1f1f1;
+}
+
+.profile-table td {
+    color: #555;
+}
+
+/* Dark mode stripes for data rows */
+body.dark .profile-table tr:nth-child(odd) td {
+    background-color: #2b2b2b;
+}
+
+body.dark .profile-table tr:nth-child(even) td {
+    background-color: #1e1e1e;
+}
+
+body.dark .profile-table tr:hover td {
+    background-color: #333;
+}
+
+body.dark .profile-table td {
+    color: #ddd;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-card {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.edit-button,
+.delete-button {
+    background-color: #2693FF;
+    color: #fff;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.edit-button:hover {
+    background-color: #a8d4ff;
+}
+
+.delete-button {
+    background-color: #FF4D4D;
+}
+
+.delete-button:hover {
+    background-color: #ff9999;
+}
+
+body.dark .delete-button:hover {
+    background-color: #636363;
+}
+
+body.dark .edit-button:hover {
+    background-color: #636363;
+}
+
+.profile-table th i {
+    margin-right: 8px;
+    color: black;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+body.dark .profile-table th i {
+    color: white;
+}
+
+.memberships {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.memberships:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .memberships:hover {
+    background-color: black;
+    box-shadow: 0 6px 12px rgba(75, 75, 75, 0.897);
+}
+
+.membership-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.memberships p {
+    font-size: 1rem;
+    color: #afafaf;
+    margin: 0;
+}
+
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+}
+
+thead tr {
+    position: sticky;
+    top: 0;
+    background-color: #d5d1de;
+    color: #333;
+}
+
+body.dark thead tr {
+    position: sticky;
+    top: 0;
+    background-color: #393346;
+    color: #333;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status.paid {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status.notpaid {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.payment-table {
+    width: 60%;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-header {
+    background-color: #cbcbcb;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark .payment-header {
+    background-color: rgb(62, 62, 62);
+}
+
+.payment-body {
+    background-color: #fff;
+}
+
+body.dark .payment-body {
+    background-color: #cacaca;
+}
+
+
+/* General styles for mobile responsiveness (max-width: 768px) */
+@media (max-width: 768px) {
+    .profile-table {
+        display: table;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Increase table cell padding and font size */
+    .profile-table th,
+    .profile-table td {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Profile image adjustments */
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Buttons adjustments */
+    .edit-button,
+    .delete-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* Member card adjustments */
+    .member-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+/* Additional styles for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+
+    /* Enable horizontal scroll on very small screens */
+    .profile-table {
+        display: table;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Increase padding and font size for small screens */
+    .profile-table th,
+    .profile-table td {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Profile image adjustments */
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Button adjustments */
+    .edit-button,
+    .delete-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Maintain member card layout */
+    .member-card {
+        gap: 1rem;
+    }
+}
+
+/*end of the member_view*/
+/* member-create */
+.input-container i {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+}
+
+.input-container input[type="text"] {
+    font-size: 15px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+body.dark .input-container input[type="text"] {
+    color: white;
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container input[type="text"]:focus~.label,
+.input-container input[type="text"]:valid~.label {
+    top: -20px;
+    font-size: 16px;
+    color: #7e7e7e;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus~.underline,
+.input-container input[type="text"]:valid~.underline {
+    transform: scaleX(1);
+}
+
+/* From Uiverse.io by Pradeepsaranbishnoi */
+.radio-buttons form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 220px;
+}
+
+.radio-buttons label {
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.375em;
+}
+
+.radio-buttons label input {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio-buttons label input:checked+span {
+    background-color: #515151;
+    color: white;
+}
+
+.contaradio-buttonsiner label input:checked+span:before {
+    box-shadow: inset 0 0 0 0.4375em #727272;
+}
+
+.radio-buttons label span {
+    display: flex;
+    align-items: center;
+    padding: 0.375em 0.75em 0.375em 0.375em;
+    border-radius: 99em;
+    transition: 0.25s ease;
+    color: #CCC;
+}
+
+.radio-buttons label span:hover {
+    background-color: #d6d6e5;
+}
+
+.radio-buttons label span:before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    background-color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.375em;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.125em #626262;
+}
+
+.gender-radio {
+    display: flex;
+    /* Align items horizontally */
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Style for the label */
+.gender-radio label {
+    color: #CCC;
+    font-size: 16px;
+    margin-left: 0px;
+    margin-top: -50px;
+    margin-bottom: -80px;
+    display: flex;
+    align-items: center;
+}
+
+body.dark .gender-radio label {
+    color: #CCC;
+}
+
+.member-buttons {
+    padding-left: 200px;
+}
+
+/*end of the member_create*/
+/*member_edit*/
+.file-upload-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body.dark .file-upload-text {
+    color: #CCC;
+}
+
+/* Style for the file input */
+.file-upload-input {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for file input when no file is selected */
+.file-upload-input::before {
+
+    color: #777;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+}
+
+/* Change the appearance on hover */
+.file-upload-input:hover {
+    border-color: #2693FF;
+    background-color: #f0f8ff;
+}
+
+/* Style for the form control input */
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for placeholder text */
+.form-control::placeholder {
+    color: #aaa;
+    font-size: 16px;
+}
+
+body.dark .form-control::placeholder {
+    color: rgb(114, 114, 114);
+}
+
+/* Focus state for the input */
+.form-control:focus {
+    border-color: #2693FF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(38, 147, 255, 0.3);
+}
+
+/* Style for the select element */
+.gender-boxes {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Style for the select element on focus */
+.gender-boxes:focus {
+    border-color: #2693FF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(38, 147, 255, 0.3);
+}
+
+/* Style for the container row to ensure proper alignment */
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    /* Align buttons to the left */
+    gap: 1rem;
+    /* Space between buttons */
+    margin-top: 20px;
+    /* Space above the button container */
+}
+
+.buttons button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    /* Increased padding for a larger button */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+
+}
+
+.buttons button:hover {
+    color: var(--text-color);
+    background: var(--primary-color-light);
+
+}
+
+.buttons button:last-child {
+    background-color: #575757;
+    /* Secondary color for "back" button */
+}
+
+.buttons button:last-child:hover {
+    color: var(--text-color);
+    background: var(--primary-color-light);
+}
+
+/*end of the member edi*/
