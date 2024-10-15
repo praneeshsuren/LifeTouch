@@ -1,9 +1,11 @@
 // Select all menu items
+document.addEventListener("DOMContentLoaded", function() {
 const body = document.querySelector('body');
 const menuItems = document.querySelectorAll('.menu ul li a');
 const menuButton = document.querySelector('.menu-btn');
 const modeSwitch = document.querySelector('.toggle-switch');
 const modeText = document.querySelector('.mode-text');
+const areaChartContainer = document.querySelector('#areaChart');
 // Function to remove the active class from all items
 function removeActiveClass() {
     menuItems.forEach(item => {
@@ -12,6 +14,7 @@ function removeActiveClass() {
 }
 
 // Add click event listener to each menu item
+if (menuItems.length>0){
 menuItems.forEach(item => {
     item.addEventListener('click', function() {
         // Remove the active class from all items
@@ -33,14 +36,20 @@ menuItems.forEach(item => {
         }
     });
 });
+}
 
+if(menuButton){
 menuButton.addEventListener('click', function() {
     const sidebar = document.querySelector('.sidebar');
+    if (sidebar){
     sidebar.classList.toggle('active');
+    }
 });
+}
 
 // Area Chart with ApexCharts for Busy Hours
 // Generate labels for time range from 5 AM to 10 PM
+if(areaChartContainer){
 function generateTimeRangeLabels(startHour, endHour) {
     const labels = [];
     for (let hour = startHour; hour <= endHour; hour++) {
@@ -147,7 +156,7 @@ function updateChartTheme(isDarkMode) {
         grid: isDarkMode ? '#333333' : '#E0E0E0',
         areaColor: isDarkMode ? '#8B5CF6' : '#695CFE'
     };
-
+    if(chart){
     chart.updateOptions({
         theme: {
             mode: isDarkMode ? 'dark' : 'light'
@@ -178,23 +187,30 @@ function updateChartTheme(isDarkMode) {
             theme: isDarkMode ? 'dark' : 'light'
         }
     });
+    }
 }
 
-let mode = localStorage.getItem('mode');
-if (mode === 'dark') {
-    body.classList.add('dark');
-    modeText.innerText = 'Light Mode';
+// Initialize mode based on localStorage
+let mode = localStorage.getItem('mode') || 'light';
+body.classList.toggle('dark', mode === 'dark');
+modeText.innerText = mode === 'dark' ? 'Light Mode' : 'Dark Mode';
+updateChartTheme(body.classList.contains('dark'));
 }
 
 // Toggle Dark/Light Mode
+if(modeSwitch && modeText){
 modeSwitch.addEventListener('click', () => {
     body.classList.toggle('dark');
     const isDarkMode = body.classList.contains('dark');
     
     modeText.innerText = isDarkMode ? 'Light Mode' : 'Dark Mode';
     localStorage.setItem('mode', isDarkMode ? 'dark' : 'light');
-    updateChartTheme(isDarkMode);
+    
+    if(areaChartContainer){
+        updateChartTheme(isDarkMode);
+    }
 });
+}
 
 // Initialize chart with current theme
 updateChartTheme(body.classList.contains('dark'));
@@ -227,15 +243,23 @@ unReadAnnouncements.forEach((announcement) => {
     observer.observe(announcement);
 });
 
+if(markAllAsReadButton){
 markAllAsReadButton.addEventListener('click', function() {
     unReadAnnouncements.forEach((announcement) => {
         announcement.classList.remove('unread');
     });
     updateUnreadCount();
 });
+}
 
 function updateUnreadCount() {
     const currentUnreadCount = document.querySelectorAll('.unread').length;
-    unReadAnnouncementsCount.textContent = currentUnreadCount + ' Unread!';
-    unReadAnnouncementsCount.style.display = currentUnreadCount === 0 ? 'none' : 'flex';
+
+    if (unReadAnnouncementsCount) { // Check if the element exists
+        unReadAnnouncementsCount.textContent = currentUnreadCount + ' Unread!';
+        unReadAnnouncementsCount.style.display = currentUnreadCount === 0 ? 'none' : 'flex';
+    } else {
+        console.error('Element with ID num-of-announcements not found.');
+    }
 }
+});

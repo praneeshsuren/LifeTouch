@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/member-style.css" />
     <!-- ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            (function() {
+                var savedMode = localStorage.getItem('mode');
+                if (savedMode === 'dark') {
+                document.body.classList.add('dark');
+                }
+            })();
+          });
+    </script>
     <title><?php echo SITENAME; ?></title>
   </head>
   <body>
@@ -71,7 +81,7 @@
         </div>
     </main>
 
-    <script src="<?php echo URLROOT; ?>/public/js/member-script.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/member-script.js?v=<?php echo time();?>"></script>
 
   </body>
 </html>

@@ -13,6 +13,16 @@
             $this->view('member/member-announcements');
         }
         public function memberSupplements(){
-            $this->view('member/member-supplements');} 
+            $this->view('member/member-supplements');
+        }
+        public function memberWorkoutschedules(){
+            $this->view('member/member-workoutschedules');
+        } 
+        public function memberPayment(){
+            $this->view('member/member-payment');
+        } 
+        public function memberSettings(){
+            $this->view('member/member-settings');
+        } 
     }
 ?>

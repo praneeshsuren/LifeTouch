@@ -15,37 +15,37 @@
         <p class="title">Main</p>
         <ul>
             <li>
-                <a href="#">
+                <a href="memberDashboard">
                     <i class='icon ph-bold ph-house-simple'></i>
                     <span class="text">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="memberViewtrainer">
                     <i class='icon ph-bold ph-user'></i>
                     <span class="text">View trainer</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="memberWorkoutschedules">
                     <i class='icon ph-bold ph-barbell'></i>
                     <span class="text">Workout schedules</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="memberAnnouncements">
                     <i class='icon ph-bold ph-newspaper'></i>
                     <span class="text">View Announcements</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="memberSupplements">
                     <i class='icon ph-bold ph-flask'></i>
                     <span class="text">Supplements</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="memberPayment">
                     <i class='icon ph-bold ph-credit-card'></i>
                     <span class="text">Payment</span>
                 </a>
@@ -56,7 +56,7 @@
         <p class="title">Settings</p>
         <ul>
             <li>
-                <a href="#">
+                <a href="memberSettings">
                     <i class='icon ph-bold ph-gear'></i>
                     <span class="text">Settings</span>
                 </a>
