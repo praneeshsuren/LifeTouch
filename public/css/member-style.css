@@ -823,7 +823,6 @@ main .announcementsContainer .announcement-card .announcementCard-Footer i{
 
     main .member-view-trainer{
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows:repeat(3, 1fr);
     }
 
     main .trainer-image{
@@ -848,7 +847,9 @@ main .announcementsContainer .announcement-card .announcementCard-Footer i{
     main.member-supplements .member-supplements-btn{
         padding: 8px 16px;
         font-size: 0.8rem;
-    }
+    }    
+
+    
 }
 
 /*member-view trainer-section*/
@@ -966,14 +967,14 @@ main .announcementsContainer .announcement-card .announcementCard-Footer i{
     color:var(--text-color);
     background: var(--primary-color-light);
 }
-
-/* search button */
-
+/* search bar */
 main > .searchbar {
-    grid-column: 1/ -1;
+    grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
+    /* Space out child elements */
     align-items: center;
+    /* Align items vertically center */
 }
 .search button {
     border: none;
@@ -1061,4 +1062,4 @@ main > .searchbar {
 .search svg {
     width: 17px;
     margin-top: 3px;
-}
+}     
